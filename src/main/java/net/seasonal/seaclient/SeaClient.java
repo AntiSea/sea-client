@@ -19,7 +19,7 @@ public class SeaClient implements ModInitializer {
                 LOGGER.info("Notification!");
                 Notification.showNotification("§aTesting", 0x00FF00);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                LOGGER.error("Error while sleeping", e);
             }
         }).start();
     }
