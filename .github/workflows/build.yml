@@ -2,7 +2,10 @@ name: build
 on:
   push:
     branches:
-      - main  # Change this to your release branch if needed
+      - main  # Change if needed
+
+permissions:
+  contents: write  # Required to create a release
 
 jobs:
   build:
@@ -35,6 +38,8 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write  # Required for creating a release
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -48,10 +53,10 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: build/libs/*.jar  # Adjust this if needed
-          tag_name: v1.0.${{ github.run_number }}
-          name: Release v1.0.${{ github.run_number }}
-          body: "Automatically generated release."
+          files: build/libs/*.jar  # Adjust if needed
+          tag_name: sea-client-v1.0.${{ github.run_number }}  # Custom tag format
+          name: Sea Client v1.0.${{ github.run_number }}  # Custom release name
+          body: "Automatically generated release for Sea Client."
           draft: false
           prerelease: false
         env:
