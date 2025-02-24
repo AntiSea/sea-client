@@ -1,11 +1,12 @@
 {
 	"required": true,
 	"package": "net.seasonal.seaclient.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+	  "MixinKeybinds"
 	],
 	"injectors": {
-		"defaultRequire": 1
+	  "defaultRequire": 1
 	}
-}
+  }
+  

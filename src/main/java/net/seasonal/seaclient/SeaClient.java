@@ -1,6 +1,5 @@
 package net.seasonal.seaclient;
 
-import net.seasonal.seaclient.utils.gui.Notification;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,16 +10,6 @@ public class SeaClient implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("SeaClient initialized!");
-        new Thread(() -> {
-            try {
-                Thread.sleep(10000);
-                
-                LOGGER.info("Notification!");
-                Notification.showNotification("§aTesting", 0x00FF00);
-            } catch (InterruptedException e) {
-                LOGGER.error("Error while sleeping", e);
-            }
-        }).start();
+        LOGGER.info("SeaClient Initialized!");
     }
 }

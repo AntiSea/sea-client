@@ -18,6 +18,9 @@
 		"main": [
 			"net.seasonal.seaclient.SeaClient"
 		],
+		"client": [
+			"net.seasonal.seaclient.SeaClientClient"
+		],
 		"fabric-datagen": [
 			"net.seasonal.seaclient.SeaClientDataGenerator"
 		]
