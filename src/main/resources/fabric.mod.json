@@ -1,33 +1,33 @@
 {
 	"schemaVersion": 1,
+	"name": "Sea Client",
 	"id": "sea-client",
 	"version": "${version}",
-	"name": "Sea Client",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Based utility mod.",
 	"authors": [
-		"Me!"
+		"AntiSea",
+		"sea"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/AntiSea/sea-client"
 	},
-	"license": "CC0-1.0",
+	"license": "GPL-3.0",
 	"icon": "assets/sea-client/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
+		"client": [
 			"net.antisea.seaclient.SeaClient"
-		],
-		"fabric-datagen": [
-			"net.antisea.seaclient.SeaClientDataGenerator"
 		]
 	},
 	"mixins": [
 		"sea-client.mixins.json"
 	],
+	"custom": {
+		"sea-client:color": "30,30,30"
+  	},
 	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.4",
+		"fabricloader":	">=${loader_version}",
+		"minecraft": ["${minecraft_version}"],
 		"java": ">=21",
 		"fabric-api": "*"
 	},
