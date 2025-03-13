@@ -1,4 +1,4 @@
-package net.seasonal.seaclient;
+package net.antisea.seaclient;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

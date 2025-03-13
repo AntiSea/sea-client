@@ -16,13 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.seasonal.seaclient.SeaClient"
-		],
-		"client": [
-			"net.seasonal.seaclient.SeaClientClient"
+			"net.antisea.seaclient.SeaClient"
 		],
 		"fabric-datagen": [
-			"net.seasonal.seaclient.SeaClientDataGenerator"
+			"net.antisea.seaclient.SeaClientDataGenerator"
 		]
 	},
 	"mixins": [
