@@ -53,5 +53,12 @@ public class SeaClient implements ClientModInitializer {
         WorldRenderEvents.END.register(context -> {
             Render.render();
         });
+
+        // Register a client render event to render ImGui in menus
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.currentScreen != null) {
+                Render.render();
+            }
+        });
     }
 }

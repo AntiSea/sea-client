@@ -42,6 +42,7 @@ public class Render {
 
         // Render your GUI
         ImGui.setNextWindowSize(ImGui.getIO().getDisplaySizeX(), ImGui.getIO().getDisplaySizeY());
+        ImGui.setNextWindowPos(0, 0);
         ImGui.setNextWindowBgAlpha(0.5f); // Set window background transparency
         ImGui.begin("Sea Client GUI", ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoBackground);
 
